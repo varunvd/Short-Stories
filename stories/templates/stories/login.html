@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Short Stories</title>
+</head>
+<body>
+<p> Welcome to our world of short stories</p>
+<form action="{% url 'story:index' %}" method="post">
+    {% csrf_token %}
+    <label>Email ID</label><br />
+    <input type="text" id="username" name="email" placeholder="">
+    <label>Password</label>
+    <input type="password" id="password" name="password" placeholder="">
+    <button class="btn btn-success">Login</button>
+</form>
+<input class="btn btn-success" type="button" value="Register" onclick="location.href='{% url 'story:register' %}'" />
+</body>
+</html>
